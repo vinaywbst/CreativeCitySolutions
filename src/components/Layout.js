@@ -1,15 +1,19 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
-import Navbar from './Navbar'
 import './all.sass'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../components/assets/styles/style.css';
+import Header from './header'
+import Footer from './footer' 
+
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet title="Home | Gatsby + WordPress" />
-    <Navbar />
-    <div>{children}</div>
+  <div className="main-wrapper">
+      <Helmet title="Creative City Solutions" />
+      <Header />
+        <div className="content-wrapper">{children}</div>
+      <Footer />
   </div>
 )
 
-export default TemplateWrapper
+export default TemplateWrapper;
